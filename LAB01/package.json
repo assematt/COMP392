@@ -1,7 +1,7 @@
 {
-  "name": "COMP397-LAB02",
+  "name": "COMP397-LAB01",
   "version": "1.0.0",
-  "description": "LAB02 for COMP397 class",
+  "description": "LAB01 for COMP397 class",
   "main": "index.js",
   "repository": "https://github.com/assematt/COMP392",
   "author": "Matteo Assenza",
