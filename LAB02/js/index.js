@@ -28,7 +28,7 @@
             }
             
             newObject.material = new THREE.MeshLambertMaterial({ color: this.color });
-            newObject.position.set( Math.random() * 50, Math.random() * 50, Math.random() * 50 );
+            newObject.position.set( Math.random() * 100, this.size / 2, Math.random() * 100 );
             scene.add( newObject );
 
         };
@@ -41,6 +41,7 @@
     var sphereObject = new THREE.Mesh();
     var boxObject = new THREE.Mesh();
     var cylinderObject = new THREE.Mesh();
+    var planeObject = new THREE.Mesh();
 
     // App main entry point
     function Main()
@@ -56,7 +57,7 @@
 
     function CreateCameraAndLights()
     {        
-        camera.position.set(50, 50, 50);
+        camera.position.set(100, 100, 100);
         camera.lookAt(0, 0, 0);
 
         var axesHelper = new THREE.AxesHelper( 75 );
@@ -77,12 +78,18 @@
         boxObject.geometry = new THREE.BoxGeometry( 10, 10, 10 );
         boxObject.material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
         boxObject.position.set( 0, 0, 0 );
-        //scene.add( boxObject );
+        scene.add( boxObject );
 
         cylinderObject.geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
         cylinderObject.material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
         cylinderObject.position.set( 50, 0, 0 );
         scene.add( cylinderObject );
+
+        planeObject.geometry = new THREE.PlaneGeometry( 100, 100, 10 );
+        planeObject.material = new THREE.MeshBasicMaterial( {color: 0xFFFFFF, side: THREE.DoubleSide} );
+        planeObject.position.set( 50, 0, 50 );
+        planeObject.rotateX(0.5 * 3.14);
+        scene.add( planeObject );
 
     }
 
