@@ -1,0 +1,13 @@
+{
+  "name": "COMP397-LAB02",
+  "version": "1.0.0",
+  "description": "LAB02 for COMP397 class",
+  "main": "index.js",
+  "repository": "https://github.com/assematt/COMP392",
+  "author": "Matteo Assenza",
+  "license": "MIT",
+  "dependencies": {
+    "dat.gui": "^0.7.6",
+    "three": "^0.112.1"
+  }
+}
